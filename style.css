@@ -1,0 +1,180 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #1a1a1a;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.calculator {
+  background: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #888;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+button {
+  background: #646cff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #747bff;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.result {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+}
+
+.hidden {
+  display: none;
+}
+
+.gauge-container {
+  margin: 1rem auto;
+  max-width: 250px;
+  padding: 0.5rem;
+}
+
+.gauge-container svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.gauge-label {
+  font-size: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gauge-value {
+  font-size: 5px;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+#needle-group {
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+h1 {
+  color: #646cff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#bmi-value {
+  font-weight: bold;
+  color: #646cff;
+}
+
+#bmi-category {
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  .calculator {
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  input {
+    background: #f5f5f5;
+    border-color: #ddd;
+    color: #213547;
+  }
+  input::placeholder {
+    color: #999;
+  }
+  label {
+    color: #666;
+  }
+  .gauge-bg {
+    stroke: #eee !important;
+  }
+  #gauge-needle, #gauge-needle-pivot {
+    fill: #333 !important;
+    stroke: #333 !important;
+  }
+  body {
+    background: #f5f5f5;
+  }
+}
